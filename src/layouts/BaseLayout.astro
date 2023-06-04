@@ -1,0 +1,49 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+const { title } = Astro.props;
+const { pathname } = Astro.url;
+const pathNumber = Number(pathname.split("/")[1]);
+---
+
+<html lang="en" data-theme="night">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="title" content="Infinity Gauntlet" />
+    <meta
+      name="description"
+      content="Perfectly balanced... as all things should be..."
+    />
+    <link rel="icon" href="/favicon.png" />
+  </head>
+
+  <body class="block h-[100%]">
+    <Header title={title} />
+    <main
+      class="container flex flex-col text-center items-center justify-center gap-3 sm:gap-6 px-4 py-16 mx-auto min-h-[calc(100%-64px)]"
+    >
+      <slot />
+
+      {
+        pathname === "/" ? (
+          <a class="btn btn-primary" href="/1">
+            Begin
+          </a>
+        ) : (
+          <div class="join">
+            <a
+              class="btn btn-primary join-item"
+              href={pathNumber === 1 ? "/" : `/${pathNumber - 1}`}
+            >
+              Previous
+            </a>
+            <a class="btn btn-primary join-item" href={`/${pathNumber + 1}`}>
+              Next
+            </a>
+          </div>
+        )
+      }
+    </main>
+  </body>
+</html>
