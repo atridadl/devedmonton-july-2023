@@ -6,27 +6,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<BaseLayout title="?????">
 		<h1 class="text-6xl font-bold text-secondary">B-but why?</h1>
 		<h2 class="text-2xl">
-			Well... lets do some pros and con of Javascript in webpages:
+			Lets compare some typical approaches for web architectures:
 		</h2>
 
-		<div class="prose">
-			Pros:
-			<ol class="">
-				<li>Interactivity</li>
-				<li>App-like routing</li>
-				<li>Stateful pages</li>
-				<li>Dynamic rendering</li>
-				<li>Probably some more idk...</li>
-			</ol>
-		</div>
+		<div class="flex flex-row items-center justify-center w-full mx-auto">
+			<div
+				class="flex-grow min-h-[100%] card bg-base-300 rounded-box place-items-center prose text-left p-2"
+			>
+				<div>MPA:</div>
+				<ol>
+					<li>Routing is handled by the server</li>
+					<li>Static and Dynamic rendering options</li>
+					<li>High performance (lighthouse)</li>
+					<li>Simple SEO</li>
+					<li>Stateless</li>
+					<li>Probably some more idk...</li>
+				</ol>
+			</div>
+			<div class="divider divider-horizontal">VS</div>
+			<div
+				class="grid flex-grow min-h-[100%] card bg-base-300 rounded-box place-items-center prose text-left p-2"
+			>
+				<div>SPA:</div>
 
-		<div class="prose">
-			Cons:
-			<ol class="">
-				<li>S L O W</li>
-				<li>Render blocking</li>
-				<li>More difficult to render on slower connections</li>
-			</ol>
+				<ol>
+					<li>Routing is handled by the server</li>
+					<li>Static and Dynamic rendering options</li>
+					<li>App-like routing (handled client side)</li>
+					<li>Stateful</li>
+					<li>larger bundle</li>
+					<li>Relies on hydration to be interactive</li>
+					<li>Probably some more idk...</li>
+				</ol>
+			</div>
 		</div>
 	</BaseLayout>
 </html>
