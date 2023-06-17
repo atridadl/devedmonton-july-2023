@@ -1,22 +1,63 @@
 ---
+import Svelte from "../components/counters/Svelte.svelte";
+import Vue from "../components/counters/Vue.vue";
+import Solid from "../components/counters/Solid";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <html lang="en">
-	<BaseLayout>
-		<h1 class="text-6xl font-bold">
-			We've ended the Javascript <span class="text-secondary"
-				>framework wars</span
-			>!
-		</h1>
-		<img
-			src="https://2muchcoffee.com/blog/content/images/2020/06/react-angular-vuejs.jpg"
-			height="250"
-			width="400"
-		/>
-		<p>
-			Turns out you can lazy load 5 frontend libraries and get a 100
-			performance score on lighthouse!
-		</p>
+	<BaseLayout title="I don't think they noticed...">
+		<h1 class="text-6xl font-bold text-secondary">Is that it???</h1>
+		<h2 class="text-2xl">
+			Oh absolutely not! Remember "client:load"? Here's the same component
+			using some more fun directives!
+		</h2>
+
+		<div
+			class="flex flex-col flex-wrap gap-8 text-center items-center justify-center"
+		>
+			<p>This is your regular "client:load":</p>
+			<Svelte client:load />
+
+			<span>
+				<!-- Look... I hate this just as much as you do but I am not trying to make this look pretty so this is what you get... -->
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+			</span>
+
+			<p>
+				This is "client:idle", which renders client side when the
+				initial render is done and requestIdleCallback fires:
+			</p>
+			<Vue client:load />
+
+			<span>
+				<!-- Look... I hate this just as much as you do but I am not trying to make this look pretty so this is what you get... -->
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+			</span>
+
+			<p>"client:visible" only renders when the component is in view:</p>
+			<Solid client:visible />
+		</div>
 	</BaseLayout>
 </html>

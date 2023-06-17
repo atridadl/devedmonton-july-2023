@@ -18,9 +18,11 @@ export default defineConfig({
     port: process.env.PORT || 3000,
   },
   integrations: [preact(), react(), solidJs(), svelte(), vue(), tailwind()],
-  experimental: {
-    hybridOutput: true,
-  },
   output: "hybrid",
   compressHTML: true,
+  vite: {
+    ssr: {
+      noExternal: ["react-icons"],
+    },
+  },
 });

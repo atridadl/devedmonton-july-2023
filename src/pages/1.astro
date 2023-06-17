@@ -1,44 +1,29 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+	SiReact,
+	SiPreact,
+	SiSvelte,
+	SiVuedotjs,
+	SiSolid,
+} from "react-icons/si";
 ---
 
 <html lang="en">
 	<BaseLayout title="?????">
-		<h1 class="text-6xl font-bold text-secondary">B-but why?</h1>
-		<h2 class="text-2xl">
-			Lets compare some typical approaches for web architectures:
+		<h1 class="text-6xl font-bold text-secondary">Question:</h1>
+		<h2 class="text-4xl">
+			Who here has used one or more of these libraries?
 		</h2>
 
-		<div class="flex flex-row items-center justify-center w-full mx-auto">
-			<div
-				class="flex-grow min-h-[100%] card bg-base-300 rounded-box place-items-center prose text-left p-2"
-			>
-				<div>MPA:</div>
-				<ol>
-					<li>Routing is handled by the server</li>
-					<li>Static and Dynamic rendering options</li>
-					<li>High performance (lighthouse)</li>
-					<li>Simple SEO</li>
-					<li>Stateless</li>
-					<li>Probably some more idk...</li>
-				</ol>
-			</div>
-			<div class="divider divider-horizontal">VS</div>
-			<div
-				class="grid flex-grow min-h-[100%] card bg-base-300 rounded-box place-items-center prose text-left p-2"
-			>
-				<div>SPA:</div>
-
-				<ol>
-					<li>Routing is handled by the server</li>
-					<li>Static and Dynamic rendering options</li>
-					<li>App-like routing (handled client side)</li>
-					<li>Stateful</li>
-					<li>larger bundle</li>
-					<li>Relies on hydration to be interactive</li>
-					<li>Probably some more idk...</li>
-				</ol>
-			</div>
+		<div
+			class="flex flex-row items-center justify-center w-full mx-auto gap-2 text-6xl"
+		>
+			<SiReact client:only="react" className="text-cyan-500" />
+			<SiPreact client:only="react" className="text-purple-500" />
+			<SiSvelte client:only="react" className="text-orange-500" />
+			<SiVuedotjs client:only="react" className="text-green-500" />
+			<SiSolid client:only="react" className="text-blue-500" />
 		</div>
 	</BaseLayout>
 </html>

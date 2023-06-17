@@ -1,33 +1,20 @@
 ---
-import Preact from "../components/counters/Preact";
-import React from "../components/counters/React";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <html lang="en">
-	<BaseLayout title="🚀">
-		<h1 class="text-6xl font-bold text-secondary">Enter Astro!</h1>
-		<h2 class="text-2xl">
-			Astro is a framework that uses the <span class="text-secondary"
-				>Island Architecture</span
-			>
-		</h2>
-		<h3 class="text-2xl">
-			By default, the server renders HTML, and sends just that back to the
-			client. Any interactivity requires you to <span
-				class="text-secondary">opt in</span
-			>. These sections where you opt in are called interactive islands.
-		</h3>
+	<BaseLayout title="😃">
+		<h1 class="text-6xl font-bold text-secondary">Pros</h1>
 
-		<p>
-			For example... the counter on the left and the counter on the right
-			both use the same component. The one on the right uses the
-			"client:load" directive to opt in to client rendering.
-		</p>
-
-		<div class="flex flex-row flex-wrap gap-8">
-			<React />
-			<Preact client:load />
+		<div class="mx-auto prose text-left text-2xl">
+			<ol>
+				<li>Component-based design</li>
+				<li>Reactivity</li>
+				<li>State management</li>
+				<li>Focus on DX</li>
+				<li>Useful abstractions over vanilla HTML + JS</li>
+				<li>Probably some more idk...</li>
+			</ol>
 		</div>
 	</BaseLayout>
 </html>
