@@ -5,24 +5,23 @@ import react from "@astrojs/react";
 import solidJs from "@astrojs/solid-js";
 import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
-
 import tailwind from "@astrojs/tailwind";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: vercel(),
   server: {
     host: "0.0.0.0",
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 3000
   },
   integrations: [preact(), react(), solidJs(), svelte(), vue(), tailwind()],
   output: "hybrid",
   compressHTML: true,
   vite: {
     ssr: {
-      noExternal: ["react-icons"],
-    },
-  },
+      noExternal: ["react-icons"]
+    }
+  }
 });
