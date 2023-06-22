@@ -3,16 +3,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <html lang="en">
-	<BaseLayout>
+	<BaseLayout title="🫡">
 		<h1 class="text-6xl font-bold">
-			We've ended the Javascript <span class="text-secondary"
-				>framework wars</span
-			>!
+			This example isn't realistic... what are the real use cases?:
 		</h1>
-		<img src="/frameworkwars.jpg" height="250" width="400" />
-		<p>
-			Turns out you can lazy load 5 frontend libraries and get a 100
-			performance score on lighthouse!
-		</p>
+		<div class="mx-auto prose text-left text-2xl">
+			<ol>
+				<li>Transitioning between libraries</li>
+				<li>
+					Leveraging packages best suited for one particular library
+				</li>
+				<li>
+					Transitioning more performance-oriented components to
+					SolidJS/Svelte
+				</li>
+			</ol>
+		</div>
 	</BaseLayout>
 </html>

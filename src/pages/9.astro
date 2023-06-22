@@ -1,21 +1,27 @@
 ---
+import {
+	SiPreact,
+	SiReact,
+	SiSolid,
+	SiSvelte,
+	SiVuedotjs,
+} from "react-icons/si";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <html lang="en">
-	<BaseLayout>
+	<BaseLayout title="😎">
 		<h1 class="text-6xl font-bold">
-			The colours on each counter corresponded to a framework. The same
-			application is running...:
+			Multiple UI Libraries in the same project!
 		</h1>
-		<div class="prose">
-			<ol class="">
-				<li>Preact</li>
-				<li>React</li>
-				<li>Svelte</li>
-				<li>Vue</li>
-				<li>and Solid!</li>
-			</ol>
+		<div
+			class="flex flex-row items-center justify-center w-full mx-auto gap-2 text-6xl"
+		>
+			<SiReact client:only="react" className="text-cyan-500" />
+			<SiPreact client:only="react" className="text-purple-500" />
+			<SiSvelte client:only="react" className="text-orange-500" />
+			<SiVuedotjs client:only="react" className="text-green-500" />
+			<SiSolid client:only="react" className="text-blue-500" />
 		</div>
 	</BaseLayout>
 </html>
