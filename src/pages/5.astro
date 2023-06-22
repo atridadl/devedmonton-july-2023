@@ -1,5 +1,4 @@
 ---
-import Preact from "../components/counters/Preact";
 import React from "../components/counters/React";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
@@ -31,7 +30,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 		<div class="flex flex-row flex-wrap gap-8">
 			<React />
-			<Preact client:load />
+			<React client:load />
 		</div>
 	</BaseLayout>
 </html>

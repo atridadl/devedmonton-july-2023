@@ -1,12 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import {
-	SiReact,
-	SiPreact,
-	SiSvelte,
-	SiVuedotjs,
-	SiSolid,
-} from "react-icons/si";
+import { SiReact, SiSvelte, SiVuedotjs, SiSolid } from "react-icons/si";
 ---
 
 <html lang="en">
@@ -19,11 +13,10 @@ import {
 		<div
 			class="flex flex-row items-center justify-center w-full mx-auto gap-2 text-6xl"
 		>
-			<SiReact client:only="react" className="text-cyan-500" />
-			<SiPreact client:only="react" className="text-purple-500" />
-			<SiSvelte client:only="react" className="text-orange-500" />
-			<SiVuedotjs client:only="react" className="text-green-500" />
-			<SiSolid client:only="react" className="text-blue-500" />
+			<SiReact className="text-cyan-500" />
+			<SiSvelte className="text-orange-500" />
+			<SiVuedotjs className="text-green-500" />
+			<SiSolid className="text-blue-500" />
 		</div>
 	</BaseLayout>
 </html>
