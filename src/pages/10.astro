@@ -1,16 +1,23 @@
 ---
-import { SiAstro, SiDeno } from "react-icons/si";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <html lang="en">
-	<BaseLayout title="😎">
-		<h1 class="text-6xl font-bold">Frameworks that use Islands:</h1>
-		<div
-			class="flex flex-row items-center justify-center w-full mx-auto gap-2 text-6xl"
-		>
-			<SiAstro className="text-red-500" />
-			<SiDeno className="text-yellow-500" />
+	<BaseLayout title="🫡">
+		<h1 class="text-6xl font-bold">
+			This example isn't realistic... what are the real use cases?:
+		</h1>
+		<div class="mx-auto prose text-left text-2xl">
+			<ol>
+				<li>Transitioning between libraries</li>
+				<li>
+					Leveraging packages best suited for one particular library
+				</li>
+				<li>
+					Transitioning more performance-oriented components to
+					SolidJS/Svelte
+				</li>
+			</ol>
 		</div>
 	</BaseLayout>
 </html>

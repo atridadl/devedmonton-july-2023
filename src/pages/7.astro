@@ -1,14 +1,16 @@
 ---
+import { SiAstro, SiDeno } from "react-icons/si";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <html lang="en">
-	<BaseLayout title="🤙">
-		<h1 class="text-6xl font-bold text-secondary">For example...</h1>
-		<h2 class="text-2xl">
-			My site uses Astro, and all it loads is its HTML, CSS, and some
-			prefetch JS to make navigation a bit smoother:
-		</h2>
-		<img src="/console.png" width="280" />
+	<BaseLayout title="😎">
+		<h1 class="text-6xl font-bold">Frameworks that use Islands:</h1>
+		<div
+			class="flex flex-row items-center justify-center w-full mx-auto gap-2 text-6xl"
+		>
+			<SiAstro className="text-red-500" />
+			<SiDeno className="text-yellow-500" />
+		</div>
 	</BaseLayout>
 </html>
