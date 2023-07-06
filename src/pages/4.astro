@@ -7,16 +7,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		<h1 class="text-6xl font-bold text-secondary">SSR can help...</h1>
 
 		<div class="prose text-left text-2xl">
-			<ol>
-				<li>
-					<s>Large bundles</s><br />
-					Initial load is faster
-				</li>
-			</ol>
+			<li>Large bundles</li>
 			<li>Virtual DOM overhead</li>
 			<li>Client-side routing overhead</li>
 			<li>
 				<s>Client receives blank HTML before hydration</s>
+				<br />
+				We receive fully formed HTML on the initial request
+			</li>
+			<li>
+				<s>Bad SEO</s>
 				<br />
 				We receive fully formed HTML on the initial request
 			</li>
